@@ -6,10 +6,13 @@ output:
   pdf_document:
     number_sections: yes
     toc: yes
-toccolor: blue
+  html_document:
+    df_print: paged
+    toc: yes
 linkcolor: red
 header-includes: \renewcommand{\contentsname}{Contenidos}
 citecolor: blue
+toccolor: blue
 urlcolor: blue
 ---
 
@@ -17,47 +20,47 @@ urlcolor: blue
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Intervalos de confianza  taller 1
-
+# Estimación por intervalos taller 1
 
 ## Ejercicio 1
-El fabricante SMART_LED fabrica bombillas led  inteligentes y de alta gama. Supongamos que la vida de  de estas bombillas sigue una distribución exponencial de parámetro $\lambda$. Si tomamos  una muestra aleatoria 
-de  tamaño $n$ de estas bombillas y representamos por  $X_i$ la duración de la $i-$ésima bombilla para $i=1,\ldots,n$, ¿cuál es la función de densidad conjunta de la muestra?
+
+De una población de barras de hierro se extrae una muestra de $64$ barras y  se calcula la
+resistencia a la rotura por tracción se obtiene que $\overline{X}=1012\ Kg/cm^{2}$. Se sabe
+por experiencia que en este tipo de barras $\sigma=25$. Calcular un intervalo de confianza
+para $\mu$ al nivel 0.95. 
+
 
 ## Ejercicio 2
-Sean $X_1,X_2,\ldots,X_{10}$  variables aleatorias que son una muestra aleatoria simple de una v.a. $X$. 
-   a. Dividimos la muestra en dos partes: de forma que la primera son los $5$ primeros valores y la segunda los restantes. 
-  ¿Son  independientes las dos partes?
-   b. Volvemos a dividir la muestra en dos partes: la primera  está formada por los $5$ valores más pequeños y
-  la segunda por el resto. ¿Son independientes las dos partes?
+
+Para investigar el C.I. medio de una cierta población de estudiantes, se realiza un test a
+$400$ estudiantes. La media y la desviación típica  muestrales obtenidas son
+$\overline{x}=86$ y $\tilde{s}_{X}=10.2$. Calcular un intervalo para $\mu$ con un nivel de
+significación del 98\%.
 
 ## Ejercicio 3
-Un fabricante de motores  pone a prueba  $6$ motores sobre   el mismo prototipo  de coche de competición. Para probar que los motores tienes las mismas prestaciones se someten a distintas pruebas en un circuito. 
-Las velocidades máximas en 10 vueltas al circuito  de cada motor tras la prueba son  $190,195,193,177,201$ y $187$ en Km/h. Estos valores forman una muestra aleatoria simple de la variable $X=\mbox{velocidad máxima de un motor en 10 vueltas.}$ Se pide calcular los valores observados de los siguientes estadísticos de  la muestra:
-   a. $\overline{X}$.
-   b. $\tilde{S}^2$.
-   c. Mediana.
-   d. $X_{(4)}$ (valor que ocupa el  cuarto lugar ordenados los valores de menor a mayor).
 
-## Ejercicio 4
-¿Cuál es  la probabilidad de que el  máximo de  de una muestra de tamaño $n=10$ de una v.a. uniforme en el intervalo $(0,1)$ sea mayor que $0.9$? ¿Cuál es la probabilidad de sea menor  que $\frac12$?
+Para investigar un nuevo tipo de combustible para cohetes espaciales, se disparan cuatro
+unidades y se miden las velocidades iniciales. Los resultados obtenidos, expresados en
+Km/h, son :19600, 20300, 20500, 19800. Calcular un intervalo para la velocidad media $\mu$
+con un nivel de confianza del 95\%, suponiendo que las velocidades son normales.
+
+
+
+## Ejercicio 4 
+
+Un fabricante de cronómetros quiere calcular un intervalo de estimación de la desviación
+típica del tiempo marcado en $100$ horas por todos los cronómetros  de un cierto modelo.
+Para ello pone en marcha $10$ cronómetros del modelo durante $100$ horas y encuentra que
+$\tilde{s}_{X}=50$ segundos. Encontrar un intervalo para el parámetro $\sigma^2$ con
+$\alpha=0.01$, suponiendo que la población del tiempo marcado por los cronómetros es
+normal. 
 
 ## Ejercicio 5
-Sea $X_1,X_2,\ldots,X_n$ una muestra aleatoria simple de una
-variable aleatoria  normal de parámetros $\mu$ y $\sigma$. Denotemos por $X_{(1)}\leq X_{(2)}\leq ,\ldots,\leq X_{(n)}$ la muestra ordenada de menor a mayor.
-   a. Calcular la funciones de densidad del mínimo $X_{(1)}$ y del máximo $X_{(n)}$
-   b. ¿Alguna de estas variables sigue una distribución normal?
 
-## Ejercicio 6
-Consideremos la muestra aleatoria simple $X_1,X_2,\ldots,X_n$  de una v.a $X$  de media $\mu$ y  varianza $\sigma^2$ desconocidas. Definimos $$\overline{X}=\frac1n \sum\limits_{i=1}^n X_i\mbox{ y } T=\frac{\sqrt{n}\cdot(\overline{X}-\mu)}{\sigma}.$$
+Un auditor informático quiere investigar la proporción de rutinas de un programa que
+presentan una determinada irregularidad. Para ello observa $120$ rutinas, resultando que
+$30$ de ellas presentan alguna irregularidad. Con estos datos buscar unos límites de
+confianza para la proporción $p$ de rutinas de la población que presentan esa irregularidad
+con probabilidad del 95\%.
 
-   a. ¿Cuál es la distribución de $T$?
-   b. ¿Es $T$ un estadístico?
-
-## Ejercicio 7
-Consideremos la muestra aleatoria simple $X_1,X_2,\ldots,X_n$  de tamaño $n=10$ de una v.a $X$ normal estándar. Calculad $P\left(2.56<\sum\limits_{i=1}^{10} X_i^2 <18.31\right)$.
-
-## Ejercicio 8
-Consideremos la muestra aleatoria simple $X_1,X_2,\ldots,X_{n}$ de tamaño $n=10$  de una v.a $X$ normal $N(\mu=2,\sigma=4)$. Definimos  la  siguiente variable aleatoria $Y=\frac{\sum\limits_{i=1}^{10}{(X_i-2)}^2}{16}$. 
-Calculad $P(Y\leq 2.6)$
 
