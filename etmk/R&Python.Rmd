@@ -1,0 +1,36 @@
+---
+title: "R & Python"
+author: "Ezequiel Muñoz"
+date: "9/3/2020"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Reticulate
+
+```{r}
+library(reticulate)
+use_python("/Users/ezequieltomas/anaconda3/bin/python3")
+
+os <- import("os")
+
+os$listdir(".")
+```
+
+
+## El fichero add_numbers.py debe estar con la función en el mismo directorio para la siguiente instrucción
+
+```{r}
+source_python("add_numbers.py")
+add_numbers(3,4)
+```
+
+
+
+
